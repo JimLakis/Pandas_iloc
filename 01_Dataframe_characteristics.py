@@ -5,7 +5,8 @@ import pandas as pd
 
 
 def load_CSV():
-	''' Reading in the CSV file, creating a DataFrame'''
+	''' Reading in the CSV file, creating a DataFrame.
+	The CSV file was obtained from https://www.briandunning.com/sample-data/ '''
     df = pd.read_csv('uk-500.csv', delimiter=',')
     return df
 
