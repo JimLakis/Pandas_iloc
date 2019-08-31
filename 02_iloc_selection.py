@@ -32,6 +32,17 @@ def select_multiple_rows(df):
 	''' Selecting multiple rows.
 		Output's data type is a DataFrame. '''
 	print(f"Selecting the first ten rows: {df.iloc[0:11]}")
+	
+	
+def select_columns(df):
+    def single_column(df):
+        pass
+    
+    def multiple_columns(df):
+        pass
+    
+    single_column(df)
+    #multiple_columns(df)
 
 		
 def main():
