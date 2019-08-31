@@ -26,24 +26,35 @@ def select_rows(df):
         
     def select_multiple_rows(df):
         ''' Selecting multiple rows.
-        Output's data type is a DataFrame. '''
+            Output's data type is a DataFrame. '''
         print(f"Selecting the first ten rows: {df.iloc[0:11]}")
         
     #single_row_return_series(df)
     #single_row_return_dataframe(df)
     select_multiple_rows(df)
-
+    
 
 def select_columns(df):
+    ''' iloc[] format notes:
+            first index value/s is a place holder for rows,
+            second index value/s is for the columns,
+            seperated by a comma.
+            example: df.iloc[rows , columns] '''
     def single_column(df):
-        pass
+        ''' Selecting a column. 
+            Output's data type is a Series.'''
+        #print(f"df.iloc[:,0] - first column:\n{df.iloc[:,0]}")
+        #print(f"df.iloc[:,1] - second column:\n{df.iloc[:,1]}")
+        print(f"df.iloc[:,-1] - last column:\n{df.iloc[:,-1]}")
     
     def multiple_columns(df):
-        pass
+        ''' Selecting multiple columns. 
+            Output's data type is a DataFrame.'''
+        print(f"df.iloc[:,0:2] - first three columns:\n{df.iloc[:,0:3]}")
     
-    single_column(df)
+    #single_column(df)
     multiple_columns(df)
-
+    
 
 def main():
     df = load_CSV()
