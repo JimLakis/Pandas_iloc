@@ -7,7 +7,8 @@ import pandas as pd
 def load_CSV():
     df = pd.read_csv('uk-500.csv', delimiter=',')
     return df
-    
+
+	
 def select_rows(df):
     def single_row_return_series(df):
         ''' Selecting a single row.
@@ -27,7 +28,12 @@ def select_rows(df):
     single_row_return_dataframe(df)
         
 
+def multiple_rows(df):
+	''' Selecting multiple rows.
+		Output's data type is a DataFrame. '''
+	print(f"Selecting the first ten rows: {df.iloc[0:9]}")
 
+		
 def main():
     df = load_CSV()
     select_rows(df)
