@@ -9,7 +9,7 @@ def load_CSV():
     return df
 
 	
-def select_rows(df):
+def select_row(df):
     def single_row_return_series(df):
         ''' Selecting a single row.
             Output's data type is a Series. '''
@@ -28,7 +28,7 @@ def select_rows(df):
     single_row_return_dataframe(df)
         
 
-def multiple_rows(df):
+def select_multiple_rows(df):
 	''' Selecting multiple rows.
 		Output's data type is a DataFrame. '''
 	print(f"Selecting the first ten rows: {df.iloc[0:11]}")
