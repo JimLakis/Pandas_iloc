@@ -31,7 +31,7 @@ def select_rows(df):
 def multiple_rows(df):
 	''' Selecting multiple rows.
 		Output's data type is a DataFrame. '''
-	print(f"Selecting the first ten rows: {df.iloc[0:9]}")
+	print(f"Selecting the first ten rows: {df.iloc[0:11]}")
 
 		
 def main():
