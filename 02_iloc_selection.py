@@ -57,7 +57,11 @@ def select_columns(df):
 
 
 def select_combinations(df):
-    ''' Select the intersection of rows and columns. '''
+    ''' Select the intersection of rows and columns.
+        iloc[] format notes:
+            Again, the first index value/s is for rows, the second index value/s is for columns, separated by a comma.
+            With multiple rows and columns selected however, those two indexes need to be enclosed in lists.
+            example: df.iloc[[rows] , [columns]] '''
     def specific_multiple_rows_columns(df):
         pass
     
