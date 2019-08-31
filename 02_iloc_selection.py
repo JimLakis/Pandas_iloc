@@ -63,19 +63,20 @@ def select_combinations(df):
             With multiple rows and columns selected however, those two indexes need to be enclosed in lists.
             example: df.iloc[[rows] , [columns]] '''
     def specific_multiple_rows_columns(df):
-        pass
+        print(f"df.iloc[[0,2],[0,4]]\nFirst and fifth columns of the first and third rows.\n{df.iloc[[0,2],[0,4]]}")
     
     def range_rows_columns(df):
-        pass
+        print(f"df.iloc[0:2,0:3]\nFirst three columns of the first two rows.\n{df.iloc[0:2,0:3]}")
 
-    specific_multiple_rows_columns(df)
+    #specific_multiple_rows_columns(df)
     range_rows_columns(df)
     
 
 def main():
     df = load_CSV()
     #select_rows(df)
-    select_columns(df)
+    #select_columns(df)
+	select_combinations(df)
 
 
 if __name__ == "__main__":
