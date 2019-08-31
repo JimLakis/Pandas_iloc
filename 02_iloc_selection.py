@@ -54,6 +54,18 @@ def select_columns(df):
     
     #single_column(df)
     multiple_columns(df)
+
+
+def select_combinations(df):
+    ''' Select the intersection of rows and columns. '''
+    def specific_multiple_rows_columns(df):
+        pass
+    
+    def range_rows_columns(df):
+        pass
+
+    specific_multiple_rows_columns(df)
+    range_rows_columns(df)
     
 
 def main():
