@@ -36,7 +36,8 @@ def multiple_rows(df):
 		
 def main():
     df = load_CSV()
-    select_rows(df)
+    #select_rows(df)
+    multiple_rows(df)
 
 
 if __name__ == "__main__":
