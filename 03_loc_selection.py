@@ -28,12 +28,24 @@ def select_on_row_values(df):
     #select_on_single_row_values_output_series(df)
     #select_on_single_row_values_output_dataframe(df)
     select_on_multiple_row_values(df)
+	
+	
+def select_rows_and_columns(df):
+    def specific_columns(df):
+        pass
+        
+    def range_of_columns(df):
+		pass
+    
+    specific_columns(df)
+    range_of_columns(df)
     
     
 def main():
     df = load_CSV()
     df.set_index("last_name", inplace=True)
-    select_on_row_values(df)
+    #select_on_row_values(df)
+	def select_rows_and_columns(df):
 
 
 if __name__ == '__main__':
