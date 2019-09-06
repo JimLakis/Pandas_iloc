@@ -32,15 +32,17 @@ def select_on_row_values(df):
 	
 def select_rows_and_columns(df):
     def specific_columns(df):
-        pass
+        print(f"df.loc[['Zigomalas','Veness'], ['address', 'city']]: \n{df.loc[['Zigomalas','Veness'], ['address', 'city']]}")
         
     def range_of_columns(df):
-		pass
+		''' Range of columns are referenced in order from left to right '''
+        print(f"df.loc[['Zigomalas','Veness'], 'address':'email']: \n{df.loc[['Zigomalas','Veness'], 'address':'email']}")
+        # Note: notice how the range of columns is not in a list
     
-    specific_columns(df)
+    #specific_columns(df)
     range_of_columns(df)
     
-    
+
 def main():
     df = load_CSV()
     df.set_index("last_name", inplace=True)
