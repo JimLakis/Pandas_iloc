@@ -11,16 +11,22 @@ def load_CSV():
     
 def select_on_row_values(df):
     def select_on_single_row_values_output_series(df):
-        pass
+        ''' Passing one index value as a single string returns ouput type as a Series '''
+        print(f"df.loc['Zigomalas']: \n{df.loc['Zigomalas']}")
+        #print(type(df.loc['Zigomalas']))
     
     def select_on_single_row_values_output_dataframe(df):
-        pass
+        ''' Passing one index value as a single string returns ouput type as a Series '''
+        print(f"df.loc[['Zigomalas']]: \n{df.loc[['Zigomalas']]}")
+        #print(type(df.loc[['Zigomalas']]))
         
     def select_on_multiple_row_values(df):
-        pass
+        ''' Passing two or more indexes, argument must be enclosed in a list.
+            Returned data type is a DataFrame. '''
+        print(f"df.loc[['Zigomalas','Veness']] \n: {df.loc[['Zigomalas','Veness']]}")
 
-    select_on_single_row_values_output_series(df)
-    select_on_single_row_values_output_dataframe(df)
+    #select_on_single_row_values_output_series(df)
+    #select_on_single_row_values_output_dataframe(df)
     select_on_multiple_row_values(df)
     
     
