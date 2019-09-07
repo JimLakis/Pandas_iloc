@@ -57,6 +57,18 @@ def creating_new_index_column(df):
     setting_new_index_on_id_column(df)
     return df
 	
+	
+def select_row_by_new_index(df):
+    def select_single_row_by_id_numbers(df):
+        print(df.loc[200])
+        
+    def select_range_of_rows_by_id_numbers(df):
+        ''' Select first ten rows of the df displaying only the values in the 'address' column '''
+        print(df.loc[0:9, ['address']])
+        
+    #select_single_row_by_id_numbers(df)
+    select_range_of_rows_by_id_numbers(df)
+	
 
 def main():
     df = load_CSV()
@@ -64,6 +76,7 @@ def main():
     #select_on_row_values(df)
 	#def select_rows_and_columns(df)
 	df = creating_new_index_column(df)
+	select_row_by_new_index(df)
 
 
 if __name__ == '__main__':
