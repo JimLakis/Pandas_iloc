@@ -42,12 +42,28 @@ def select_rows_and_columns(df):
     #specific_columns(df)
     range_of_columns(df)
     
+	
+def creating_new_index_column(df):
+    ''' Creating and adding a new column to the df.
+        Setting the new column as the index for the df. '''
+    def adding_new_column(df):
+        df['id'] = [x for x in range(df.shape[0])]
+        return df
+    
+    def setting_new_index_on_id_column(df):
+        df.set_index('id', inplace = True)
+
+    df = adding_new_column(df)
+    setting_new_index_on_id_column(df)
+    return df
+	
 
 def main():
     df = load_CSV()
     df.set_index("last_name", inplace=True)
     #select_on_row_values(df)
-	def select_rows_and_columns(df):
+	#def select_rows_and_columns(df)
+	df = creating_new_index_column(df)
 
 
 if __name__ == '__main__':
