@@ -14,6 +14,11 @@ def load_CSV():
 def dimensions(df):
 	''' Determining the dimensions of df, rows by columns'''
     print(df.shape[:])
+	
+	
+def number_of_rows(df):
+    ''' Determining just the number of rows '''
+    print(df.shape[0])
     
 	
 def header(df):
@@ -38,6 +43,7 @@ def types_returned_from_rows(df):
 def main():
     df = load_CSV()
     dimensions(df)
+	number_of_rows(df)
     header(df)
 	types_returned_from_rows(df)
     
