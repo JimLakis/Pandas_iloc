@@ -11,6 +11,7 @@ def load_CSV():
 
 def main():
     df = load_CSV()
+	df.set_index("last_name", inplace = True)
     
 
 if __name__ == '__main__':
