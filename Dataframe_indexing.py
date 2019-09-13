@@ -19,7 +19,7 @@ def set_index_on_column_inplace(df):
 
 
 def set_index_on_column(df):
-    ''' Setting the index WITHOUT inplace argument is acceptbale within a function definition '''
+    ''' Setting the index WITHOUT inplace argument is acceptable within a function definition '''
     df = df.set_index("last_name")
     return df
 
