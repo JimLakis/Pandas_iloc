@@ -30,14 +30,19 @@ def selection_via_boolean_mapping_two_steps(df):
     
     s = boolean_mapping(df)
     loc_selection_based_on_mapping(s)
+	
+	
+def selection_via_boolean_mapping_one_steps(df):
+    ''' Combining the creating of the boolean map and its use as an index for loc[] in one statement '''
+    print(df.loc[df['county'] == 'Kent'])
 
 
 def main():
     df = load_CSV()
 	df = adding_ID_col(df)
 	df.set_index("id", inplace = True)
-	selection_via_boolean_mapping_two_steps(df)
-    
+	#selection_via_boolean_mapping_two_steps(df)
+    selection_via_boolean_mapping_one_steps(df)
 
 if __name__ == '__main__':
     main()
