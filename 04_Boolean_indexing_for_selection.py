@@ -34,6 +34,7 @@ def selection_via_boolean_mapping_two_steps(df):
 
 def main():
     df = load_CSV()
+	df = adding_ID_col(df)
 	df.set_index("id", inplace = True)
 	selection_via_boolean_mapping_two_steps(df)
     
