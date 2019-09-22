@@ -23,13 +23,22 @@ def practice_retreiving_values(df):
     #results = retrieve_rows(df)
     results = retrieve_rows_and_specific_column(df)
     print(results)
+	
+	
+def assign_values_w_loc(df):
+    ''' Assign all rows' "phone1" values to "00000-000000" where "county" equals "Derbyshire".
+        This is done inplace, ie on the same dataframe '''
+    df.loc[df["county"] == "Derbyshire", ["phone1"]] = "00000-000000"
 
 
 def main():
     df = load_CSV()
     df.set_index("last_name", inplace=True)
 
-	practice_retreiving_values(df)
+	#practice_retreiving_values(df)
+
+	assign_values_w_loc(df)
+    print(df.loc[df["county"] == "Derbyshire", ["phone1"]])
 
 
 if __name__ == '__main__':
